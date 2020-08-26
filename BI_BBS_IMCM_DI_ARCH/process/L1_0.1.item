@@ -1,6 +1,276 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" defaultContext="Default" jobType="Standard" xmi:version="2.0">
-  <context confirmationNeeded="false" name="Default"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" defaultContext="Default" jobType="Standard" xmi:version="2.0">
+  <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="" name="input_file_delimiter" prompt="input_file_delimiter?" promptNeeded="false" type="id_String" value=";"/>
+    <contextParameter comment="" name="location" prompt="location?" promptNeeded="false" type="id_String" value=","/>
+    <contextParameter comment="" name="file_name" prompt="file_name?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="final_file_delimiter" prompt="final_file_delimiter?" promptNeeded="false" type="id_Integer" value="2"/>
+    <contextParameter comment="" name="delimitre" prompt="delimitre?" promptNeeded="false" type="id_String" value=";"/>
+    <contextParameter comment="" name="file_header" prompt="file_header?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="file_path" prompt="file_path?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="file_delimiter" prompt="file_delimiter?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="job_name" prompt="job_name?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="source" prompt="source?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="product" prompt="product?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="header_position" prompt="header_position?" promptNeeded="false" type="id_Integer" value=""/>
+    <contextParameter comment="" name="channel" prompt="channel?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Audit_Database" prompt="Audit_Database?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Audit_Hostname" prompt="Audit_Hostname?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Audit_Password" prompt="Audit_Password?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Audit_Port" prompt="Audit_Port?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Audit_Username" prompt="Audit_Username?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Country_Code" prompt="Country_Code?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Intermediate_Filepath_DQCheck_Pass_IRDA" prompt="Intermediate_Filepath_DQCheck_Pass_IRDA?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Intermediate_Filepath_DQCheck_Rejects_IRDA" prompt="Intermediate_Filepath_DQCheck_Rejects_IRDA?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Intermediate_Filepath_RawS3" prompt="Intermediate_Filepath_RawS3?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="S3SemiProcessed" prompt="S3SemiProcessed?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="DQAuditTable" prompt="DQAuditTable?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="delimiter" prompt="delimiter?" promptNeeded="false" type="id_String" value=";"/>
+    <contextParameter comment="" name="ProxyHost" prompt="ProxyHost?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="ProxyPort" prompt="ProxyPort?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Region" prompt="Region?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="S3AccessKey" prompt="S3AccessKey?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="S3SecretKey" prompt="S3SecretKey?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="JobName" prompt="JobName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Bucket" prompt="Bucket?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="filename" prompt="filename?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="FilePath" prompt="FilePath?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="clientId" prompt="clientId?" promptNeeded="false" type="id_String" value="KR"/>
+    <contextParameter comment="" name="FileName_Parameter" prompt="FileName_Parameter?" promptNeeded="false" type="id_String" value="Account_List_vod__c"/>
+    <contextParameter comment="" name="SourceDB" prompt="SourceDB?" promptNeeded="false" type="id_String" value="IRDA_VEEVA_PC1"/>
+    <contextParameter comment="" name="Audit_Schema" prompt="Audit_Schema?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="S3Raw" prompt="S3Raw?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Path" prompt="Path?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="SourceName" prompt="SourceName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="CurrentDate" prompt="CurrentDate?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="CountryCode" prompt="CountryCode?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Account" prompt="Account?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="FileName" prompt="FileName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="S3_SemiProcessed" prompt="S3_SemiProcessed?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="ProcessCycle" prompt="ProcessCycle?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Current_Date_Process_Cycle" prompt="Current_Date_Process_Cycle?" promptNeeded="false" type="id_Date" value=""/>
+    <contextParameter comment="" name="PreviousDate" prompt="PreviousDate?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Previous_Date_Process_Cycle" prompt="Previous_Date_Process_Cycle?" promptNeeded="false" type="id_Date" value=""/>
+    <contextParameter comment="" name="fileextension" prompt="fileextension?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="DQFilename" prompt="DQFilename?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="pass_counter" prompt="pass_counter?" promptNeeded="false" type="id_Integer" value=""/>
+    <contextParameter comment="" name="reject_counter" prompt="reject_counter?" promptNeeded="false" type="id_Integer" value=""/>
+    <contextParameter comment="" name="vendor_source" prompt="vendor_source?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="asset_name" prompt="asset_name?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="configurationDatabaseDatabase" prompt="configurationDatabaseDatabase?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="configurationDatabaseHost" prompt="configurationDatabaseHost?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="configurationDatabasePassword" prompt="configurationDatabasePassword?" promptNeeded="false" type="id_Password" value=""/>
+    <contextParameter comment="" name="configurationDatabasePort" prompt="configurationDatabasePort?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="configurationDatabaseSchema" prompt="configurationDatabaseSchema?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="configurationDatabaseUser" prompt="configurationDatabaseUser?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="configurationEnvironment" prompt="configurationEnvironment?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="configurationEnvironmentPassword" prompt="configurationEnvironmentPassword?" promptNeeded="false" type="id_Password" value=""/>
+    <contextParameter comment="" name="jobStream" prompt="jobStream?" promptNeeded="false" type="id_String" value="*"/>
+  </context>
+  <context confirmationNeeded="false" name="QA">
+    <contextParameter comment="" name="input_file_delimiter" prompt="input_file_delimiter?" promptNeeded="false" type="id_String" value=";"/>
+    <contextParameter comment="" name="location" prompt="location?" promptNeeded="false" type="id_String" value=","/>
+    <contextParameter comment="" name="file_name" prompt="file_name?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="final_file_delimiter" prompt="final_file_delimiter?" promptNeeded="false" type="id_Integer" value="2"/>
+    <contextParameter comment="" name="delimitre" prompt="delimitre?" promptNeeded="false" type="id_String" value=";"/>
+    <contextParameter comment="" name="file_header" prompt="file_header?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="file_path" prompt="file_path?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="file_delimiter" prompt="file_delimiter?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="job_name" prompt="job_name?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="source" prompt="source?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="product" prompt="product?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="header_position" prompt="header_position?" promptNeeded="false" type="id_Integer" value=""/>
+    <contextParameter comment="" name="channel" prompt="channel?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Audit_Database" prompt="Audit_Database?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Audit_Hostname" prompt="Audit_Hostname?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Audit_Password" prompt="Audit_Password?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Audit_Port" prompt="Audit_Port?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Audit_Username" prompt="Audit_Username?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Country_Code" prompt="Country_Code?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Intermediate_Filepath_DQCheck_Pass_IRDA" prompt="Intermediate_Filepath_DQCheck_Pass_IRDA?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Intermediate_Filepath_DQCheck_Rejects_IRDA" prompt="Intermediate_Filepath_DQCheck_Rejects_IRDA?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Intermediate_Filepath_RawS3" prompt="Intermediate_Filepath_RawS3?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="S3SemiProcessed" prompt="S3SemiProcessed?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="DQAuditTable" prompt="DQAuditTable?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="delimiter" prompt="delimiter?" promptNeeded="false" type="id_String" value=";"/>
+    <contextParameter comment="" name="ProxyHost" prompt="ProxyHost?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="ProxyPort" prompt="ProxyPort?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Region" prompt="Region?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="S3AccessKey" prompt="S3AccessKey?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="S3SecretKey" prompt="S3SecretKey?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="JobName" prompt="JobName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Bucket" prompt="Bucket?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="filename" prompt="filename?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="FilePath" prompt="FilePath?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="clientId" prompt="clientId?" promptNeeded="false" type="id_String" value="ES"/>
+    <contextParameter comment="" name="FileName_Parameter" prompt="FileName_Parameter?" promptNeeded="false" type="id_String" value="Call_Objective_vod__c"/>
+    <contextParameter comment="" name="SourceDB" prompt="SourceDB?" promptNeeded="false" type="id_String" value="IRDA_VEEVA_EC2"/>
+    <contextParameter comment="" name="Audit_Schema" prompt="Audit_Schema?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="S3Raw" prompt="S3Raw?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Path" prompt="Path?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="SourceName" prompt="SourceName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="CurrentDate" prompt="CurrentDate?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="CountryCode" prompt="CountryCode?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Account" prompt="Account?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="FileName" prompt="FileName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="S3_SemiProcessed" prompt="S3_SemiProcessed?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="ProcessCycle" prompt="ProcessCycle?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Current_Date_Process_Cycle" prompt="Current_Date_Process_Cycle?" promptNeeded="false" type="id_Date" value=""/>
+    <contextParameter comment="" name="PreviousDate" prompt="PreviousDate?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Previous_Date_Process_Cycle" prompt="Previous_Date_Process_Cycle?" promptNeeded="false" type="id_Date" value=""/>
+    <contextParameter comment="" name="fileextension" prompt="fileextension?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="DQFilename" prompt="DQFilename?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="pass_counter" prompt="pass_counter?" promptNeeded="false" type="id_Integer" value=""/>
+    <contextParameter comment="" name="reject_counter" prompt="reject_counter?" promptNeeded="false" type="id_Integer" value=""/>
+    <contextParameter comment="" name="vendor_source" prompt="vendor_source?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="asset_name" prompt="asset_name?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="configurationDatabaseDatabase" prompt="configurationDatabaseDatabase?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="configurationDatabaseHost" prompt="configurationDatabaseHost?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="configurationDatabasePassword" prompt="configurationDatabasePassword?" promptNeeded="false" type="id_Password" value=""/>
+    <contextParameter comment="" name="configurationDatabasePort" prompt="configurationDatabasePort?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="configurationDatabaseSchema" prompt="configurationDatabaseSchema?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="configurationDatabaseUser" prompt="configurationDatabaseUser?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="configurationEnvironment" prompt="configurationEnvironment?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="configurationEnvironmentPassword" prompt="configurationEnvironmentPassword?" promptNeeded="false" type="id_Password" value=""/>
+    <contextParameter comment="" name="jobStream" prompt="jobStream?" promptNeeded="false" type="id_String" value="*"/>
+  </context>
+  <context confirmationNeeded="false" name="Prod">
+    <contextParameter comment="" name="input_file_delimiter" prompt="input_file_delimiter?" promptNeeded="false" type="id_String" value=";"/>
+    <contextParameter comment="" name="location" prompt="location?" promptNeeded="false" type="id_String" value=","/>
+    <contextParameter comment="" name="file_name" prompt="file_name?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="final_file_delimiter" prompt="final_file_delimiter?" promptNeeded="false" type="id_Integer" value="2"/>
+    <contextParameter comment="" name="delimitre" prompt="delimitre?" promptNeeded="false" type="id_String" value=";"/>
+    <contextParameter comment="" name="file_header" prompt="file_header?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="file_path" prompt="file_path?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="file_delimiter" prompt="file_delimiter?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="job_name" prompt="job_name?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="source" prompt="source?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="product" prompt="product?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="header_position" prompt="header_position?" promptNeeded="false" type="id_Integer" value=""/>
+    <contextParameter comment="" name="channel" prompt="channel?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Audit_Database" prompt="Audit_Database?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Audit_Hostname" prompt="Audit_Hostname?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Audit_Password" prompt="Audit_Password?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Audit_Port" prompt="Audit_Port?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Audit_Username" prompt="Audit_Username?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Country_Code" prompt="Country_Code?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Intermediate_Filepath_DQCheck_Pass_IRDA" prompt="Intermediate_Filepath_DQCheck_Pass_IRDA?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Intermediate_Filepath_DQCheck_Rejects_IRDA" prompt="Intermediate_Filepath_DQCheck_Rejects_IRDA?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Intermediate_Filepath_RawS3" prompt="Intermediate_Filepath_RawS3?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="S3SemiProcessed" prompt="S3SemiProcessed?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="DQAuditTable" prompt="DQAuditTable?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="delimiter" prompt="delimiter?" promptNeeded="false" type="id_String" value=";"/>
+    <contextParameter comment="" name="ProxyHost" prompt="ProxyHost?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="ProxyPort" prompt="ProxyPort?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Region" prompt="Region?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="S3AccessKey" prompt="S3AccessKey?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="S3SecretKey" prompt="S3SecretKey?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="JobName" prompt="JobName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Bucket" prompt="Bucket?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="filename" prompt="filename?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="FilePath" prompt="FilePath?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="clientId" prompt="clientId?" promptNeeded="false" type="id_String" value="ES"/>
+    <contextParameter comment="" name="FileName_Parameter" prompt="FileName_Parameter?" promptNeeded="false" type="id_String" value="Account"/>
+    <contextParameter comment="" name="SourceDB" prompt="SourceDB?" promptNeeded="false" type="id_String" value="IRDA_VEEVA_EC2"/>
+    <contextParameter comment="" name="Audit_Schema" prompt="Audit_Schema?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="S3Raw" prompt="S3Raw?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Path" prompt="Path?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="SourceName" prompt="SourceName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="CurrentDate" prompt="CurrentDate?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="CountryCode" prompt="CountryCode?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Account" prompt="Account?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="FileName" prompt="FileName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="S3_SemiProcessed" prompt="S3_SemiProcessed?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="ProcessCycle" prompt="ProcessCycle?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Current_Date_Process_Cycle" prompt="Current_Date_Process_Cycle?" promptNeeded="false" type="id_Date" value=""/>
+    <contextParameter comment="" name="PreviousDate" prompt="PreviousDate?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Previous_Date_Process_Cycle" prompt="Previous_Date_Process_Cycle?" promptNeeded="false" type="id_Date" value=""/>
+    <contextParameter comment="" name="fileextension" prompt="fileextension?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="DQFilename" prompt="DQFilename?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="pass_counter" prompt="pass_counter?" promptNeeded="false" type="id_Integer" value=""/>
+    <contextParameter comment="" name="reject_counter" prompt="reject_counter?" promptNeeded="false" type="id_Integer" value=""/>
+    <contextParameter comment="" name="vendor_source" prompt="vendor_source?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="asset_name" prompt="asset_name?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="configurationDatabaseDatabase" prompt="configurationDatabaseDatabase?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="configurationDatabaseHost" prompt="configurationDatabaseHost?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="configurationDatabasePassword" prompt="configurationDatabasePassword?" promptNeeded="false" type="id_Password" value=""/>
+    <contextParameter comment="" name="configurationDatabasePort" prompt="configurationDatabasePort?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="configurationDatabaseSchema" prompt="configurationDatabaseSchema?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="configurationDatabaseUser" prompt="configurationDatabaseUser?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="configurationEnvironment" prompt="configurationEnvironment?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="configurationEnvironmentPassword" prompt="configurationEnvironmentPassword?" promptNeeded="false" type="id_Password" value=""/>
+    <contextParameter comment="" name="jobStream" prompt="jobStream?" promptNeeded="false" type="id_String" value="*"/>
+  </context>
+  <context confirmationNeeded="false" name="Dev">
+    <contextParameter comment="" name="input_file_delimiter" prompt="input_file_delimiter?" promptNeeded="false" type="id_String" value=";"/>
+    <contextParameter comment="" name="location" prompt="location?" promptNeeded="false" type="id_String" value=","/>
+    <contextParameter comment="" name="file_name" prompt="file_name?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="final_file_delimiter" prompt="final_file_delimiter?" promptNeeded="false" type="id_Integer" value="2"/>
+    <contextParameter comment="" name="delimitre" prompt="delimitre?" promptNeeded="false" type="id_String" value=";"/>
+    <contextParameter comment="" name="file_header" prompt="file_header?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="file_path" prompt="file_path?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="file_delimiter" prompt="file_delimiter?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="job_name" prompt="job_name?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="source" prompt="source?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="product" prompt="product?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="header_position" prompt="header_position?" promptNeeded="false" type="id_Integer" value=""/>
+    <contextParameter comment="" name="channel" prompt="channel?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Audit_Database" prompt="Audit_Database?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Audit_Hostname" prompt="Audit_Hostname?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Audit_Password" prompt="Audit_Password?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Audit_Port" prompt="Audit_Port?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Audit_Username" prompt="Audit_Username?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Country_Code" prompt="Country_Code?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Intermediate_Filepath_DQCheck_Pass_IRDA" prompt="Intermediate_Filepath_DQCheck_Pass_IRDA?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Intermediate_Filepath_DQCheck_Rejects_IRDA" prompt="Intermediate_Filepath_DQCheck_Rejects_IRDA?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Intermediate_Filepath_RawS3" prompt="Intermediate_Filepath_RawS3?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="S3SemiProcessed" prompt="S3SemiProcessed?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="DQAuditTable" prompt="DQAuditTable?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="delimiter" prompt="delimiter?" promptNeeded="false" type="id_String" value=";"/>
+    <contextParameter comment="" name="ProxyHost" prompt="ProxyHost?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="ProxyPort" prompt="ProxyPort?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Region" prompt="Region?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="S3AccessKey" prompt="S3AccessKey?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="S3SecretKey" prompt="S3SecretKey?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="JobName" prompt="JobName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Bucket" prompt="Bucket?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="filename" prompt="filename?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="FilePath" prompt="FilePath?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="clientId" prompt="clientId?" promptNeeded="false" type="id_String" value="ES"/>
+    <contextParameter comment="" name="FileName_Parameter" prompt="FileName_Parameter?" promptNeeded="false" type="id_String" value="Time_Off_Territory_vod__c"/>
+    <contextParameter comment="" name="SourceDB" prompt="SourceDB?" promptNeeded="false" type="id_String" value="IRDA_VEEVA_EC2"/>
+    <contextParameter comment="" name="Audit_Schema" prompt="Audit_Schema?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="S3Raw" prompt="S3Raw?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Path" prompt="Path?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="SourceName" prompt="SourceName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="CurrentDate" prompt="CurrentDate?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="CountryCode" prompt="CountryCode?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Account" prompt="Account?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="FileName" prompt="FileName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="S3_SemiProcessed" prompt="S3_SemiProcessed?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="ProcessCycle" prompt="ProcessCycle?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Current_Date_Process_Cycle" prompt="Current_Date_Process_Cycle?" promptNeeded="false" type="id_Date" value=""/>
+    <contextParameter comment="" name="PreviousDate" prompt="PreviousDate?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="Previous_Date_Process_Cycle" prompt="Previous_Date_Process_Cycle?" promptNeeded="false" type="id_Date" value=""/>
+    <contextParameter comment="" name="fileextension" prompt="fileextension?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="DQFilename" prompt="DQFilename?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="pass_counter" prompt="pass_counter?" promptNeeded="false" type="id_Integer" value=""/>
+    <contextParameter comment="" name="reject_counter" prompt="reject_counter?" promptNeeded="false" type="id_Integer" value=""/>
+    <contextParameter comment="" name="vendor_source" prompt="vendor_source?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="asset_name" prompt="asset_name?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="configurationDatabaseDatabase" prompt="configurationDatabaseDatabase?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="configurationDatabaseHost" prompt="configurationDatabaseHost?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="configurationDatabasePassword" prompt="configurationDatabasePassword?" promptNeeded="false" type="id_Password" value=""/>
+    <contextParameter comment="" name="configurationDatabasePort" prompt="configurationDatabasePort?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="configurationDatabaseSchema" prompt="configurationDatabaseSchema?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="configurationDatabaseUser" prompt="configurationDatabaseUser?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="configurationEnvironment" prompt="configurationEnvironment?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="configurationEnvironmentPassword" prompt="configurationEnvironmentPassword?" promptNeeded="false" type="id_Password" value=""/>
+    <contextParameter comment="" name="jobStream" prompt="jobStream?" promptNeeded="false" type="id_String" value="*"/>
+  </context>
   <parameters>
+    <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" show="false" value="{&quot;JOB_RUN_VM_ARGUMENTS&quot;:[&quot;-Xms1024M&quot;,&quot;-Xmx8192M&quot;]}"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="448"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
@@ -16,33 +286,33 @@
     <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_END_POINT" show="false" value=""/>
-    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" show="false" value="true"/>
-    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" show="false" value="true"/>
-    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="true"/>
     <elementParameter field="TEXT" name="PARALLELIZE_UNIT_SIZE" value="25000"/>
     <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
     <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
-    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" show="false" value="true"/>
     <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;&quot;"/>
     <elementParameter field="CHECK" name="OVERRIDE_ENCODING_FLAG" show="false" value="false"/>
     <elementParameter field="ENCODING_TYPE" name="OVERRIDE_ENCODING_IN_EXTRA" show="false" value="ISO-8859-15"/>
     <elementParameter field="TECHNICAL" name="OVERRIDE_ENCODING_IN_EXTRA:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
-    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" show="false" value=""/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" show="false" value="tMysqlInput"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" show="false" value="MYSQL_5"/>
     <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT" show="false"/>
     <elementParameter field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" show="false" value="&quot;rds-imcm-global-talend-db.czijsiyqcsbd.eu-central-1.rds.amazonaws.com&quot;"/>
+    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" show="false" value="&quot;3306&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" show="false" value="&quot;IMCM_Context&quot;"/>
     <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;noDatetimeStringSync=true&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:OgLGB/MZ5I+k6VIKSOoH+F/GcfZkbGIuLIowWy61"/>
+    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;admin&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:SGujj3mPzxAbrjZEJm1/spef0ElKdjA5sWSwc6zZS/cWTGbPcqmTzqAABEbOIRy8SsnEELciPzIrEHFp"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;vImplicitContext&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" show="false" value="Warning"/>
     <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" show="false" value="Warning"/>
@@ -55,31 +325,31 @@
     <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
     <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" show="false" value="false"/>
     <elementParameter field="CHECK" name="ON_FILES_FLAG" show="false" value="false"/>
-    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;C:/Users/Narendra/workspace/.metadata&quot;"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;C:/Users/EMYEA/workspaceTalend/.metadata&quot;"/>
     <elementParameter field="TEXT" name="FILENAME_STATS" show="false" value="&quot;stats_file.txt&quot;"/>
     <elementParameter field="TEXT" name="FILENAME_LOGS" show="false" value="&quot;logs_file.txt&quot;"/>
     <elementParameter field="TEXT" name="FILENAME_METTER" show="false" value="&quot;meter_file.txt&quot;"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="ISO-8859-15"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
-    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" show="false" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="DB_TYPE" show="false" value="tJDBCOutput"/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="ORACLE_12"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" show="false" value="true"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" show="false" value="tMysqlOutput"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="ORACLE_11"/>
     <elementParameter field="TEXT" name="URL" show="false" value="&quot;&quot;"/>
     <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
     <elementParameter field="TEXT" name="DRIVER_CLASS" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;rds-imcm-global-talend-db.czijsiyqcsbd.eu-central-1.rds.amazonaws.com&quot;"/>
+    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;3306&quot;"/>
     <elementParameter field="TEXT" name="DATASOURCE" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;IMCM_Logs&quot;"/>
     <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:JhInGb2hPnGm+soJ5CEfjb/05If5JCaWVgjkzbTT"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot;admin&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:f1+0wYRcNsLXdVvt/v7Pr00wMt5ENlv0PYBEbXYIDCDnhIClketrOAjQ2NqqLtUgv9wDbQ=="/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
-    <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
-    <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
-    <elementParameter field="DBTABLE" name="TABLE_METER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;StatCatcher&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;LogCatcher&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" show="false" value="&quot;FlowmeterCatcher&quot;"/>
     <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" show="false" value="true"/>
     <elementParameter field="CHECK" name="CATCH_USER_ERRORS" show="false" value="true"/>
     <elementParameter field="CHECK" name="CATCH_USER_WARNING" show="false" value="true"/>
@@ -107,16 +377,982 @@
     <routinesParameter id="_ArwrEOdpEeqVP9SfX3oFOw" name="StringHandling"/>
     <routinesParameter id="_Ar3YwOdpEeqVP9SfX3oFOw" name="TalendDataGenerator"/>
     <routinesParameter id="_Ar-tgOdpEeqVP9SfX3oFOw" name="TalendDate"/>
-    <routinesParameter id="_AsN-EOdpEeqVP9SfX3oFOw" name="TalendStringUtil"/>
     <routinesParameter id="_AsGCQOdpEeqVP9SfX3oFOw" name="TalendString"/>
+    <routinesParameter id="_AsN-EOdpEeqVP9SfX3oFOw" name="TalendStringUtil"/>
   </parameters>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_a9f2683e-818a-430a-b8b1-bd5e85e99a07"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>TFueA2bfpGg88ILdKiYzFvU6kaQjqcJZuVCkzLUiin+N+r9vS0pr6YEFoKHliLFfjAD0tiFBo57N
-zxIO85MtMA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_b76819a7-00d2-437a-b645-b938e2a522d5"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Y5f8/G6s86bEy2c74QcBmX+dH3mido5PNNdL/0ctRpPDOwD7Ixp8h2WUZJDud6hz1laIxaUtoqAJ
-OsbkylUewQ==</DigestValue></Reference></SignedInfo><SignatureValue>H/B1Vw9tFDykr3dlfdN1Zr+dUNEwRbMXh6EQv+b9QRjfCl3z4shdH0l/7LFcIMVXwGGNigglBENp
-oEzoUgiTG/pEAv6p9ZU90txnHawBWncN3dluGUY1x02xJIvyQ+7A6B56DT+PrmfW1GG1L+C+t2pQ
-gL+YyJoEn1cCI5S5PiSBy0io/vZFz8IHMLUMciJ8Io+4zlaDjgag0o2hVOYW0h6TOhxAGUtvXrhB
-7joQBV7UA0qELw0bMqjUuHmR0C7utBXF+yHHGpQ+227GCORm0M9HSZ+tyOlAPtJEpWgXiqhBL7/+
-TldzmNbeXRvq+0yUHU39AVcJDq5xBnJJHuG4cg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="128" posY="480">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_2"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="&#13;&#10;//context.job_name=context.job_name;&#13;&#10;&#13;&#10;context.pass_counter=0;&#13;&#10;context.reject_counter=0;&#13;&#10;int temp=0;&#13;&#10;int column_position=1;&#13;&#10;&#13;&#10;while(column_position&lt;=((Integer)globalMap.get(&quot;tPostgresqlInput_1_NB_LINE&quot;))){&#13;&#10;&#9;//System.out.println(&quot;Inside While Loop::: &quot; + globalMap.get(&quot;tPostgresqlInput_1_NB_LINE&quot;) + &quot;Column Posi&quot; + column_position);&#13;&#10;&#9;if (temp==0){&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;if(globalMap.get(&quot;column_name&quot;+column_position)==null || globalMap.get(&quot;column_name&quot;+column_position).equals(&quot;&quot;)){&#13;&#10;&#9;&#9;&#9;context.file_header = globalMap.get(&quot;column_name&quot;+column_position).toString() ;&#13;&#10;&#9;&#9;&#9;temp++;&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;}&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;else{&#13;&#10;&#9;&#9;&#9;&#13;&#10;&#9;&#9;&#9;context.file_header = globalMap.get(&quot;column_name&quot;+column_position).toString() ;&#13;&#10;&#9;&#9;&#9;temp++;&#13;&#10;&#9;&#9;&#9;&#13;&#10;&#9;&#9;}&#9;&#13;&#10;&#9;}&#13;&#10;&#9;&#13;&#10;&#9;else{&#13;&#10;&#9;&#13;&#10;&#9;&#9;if(globalMap.get(&quot;column_name&quot;+column_position)==null || globalMap.get(&quot;column_name&quot;+column_position).equals(&quot;&quot;))&#9;&#9;&#13;&#10;&#9;&#9;&#9;context.file_header  = context.file_header  +  &quot;;&quot; + globalMap.get(&quot;column_name&quot;+column_position).toString();&#13;&#10;&#9;&#9;&#9;&#13;&#10;&#9;&#9;else&#9;&#9;&#13;&#10;&#9;&#9;&#9;context.file_header  = context.file_header  +  &quot;;&quot; + globalMap.get(&quot;column_name&quot;+column_position).toString();&#9;&#13;&#10;&#9;&#13;&#10;&#9;}&#13;&#10;&#9;&#13;&#10;&#9;column_position++;&#13;&#10;&#9;&#13;&#10;}&#13;&#10;&#13;&#10;&#13;&#10;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__&lt;br&gt;&lt;b&gt;Generate Target file names&lt;/b&gt;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_2"/>
+  </node>
+  <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="640">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputDelimited_1"/>
+    <elementParameter field="LABEL" name="FILENAMETEXT" value="&quot;When the input source is a stream or a zip file,footer and random shouldn't be bigger than 0.&quot;"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.Path+context.filename"/>
+    <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
+    <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;\nklm34&quot;"/>
+    <elementParameter field="TEXT" name="ESCAPE_CHAR" show="false" value="&quot;&quot;&quot;"/>
+    <elementParameter field="TEXT" name="TEXT_ENCLOSURE" show="false" value="&quot;&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HEADER" value="0"/>
+    <elementParameter field="TEXT" name="FOOTER" value="0"/>
+    <elementParameter field="TEXT" name="LIMIT" value="1"/>
+    <elementParameter field="CHECK" name="REMOVE_EMPTY_ROW" value="true"/>
+    <elementParameter field="CHECK" name="UNCOMPRESS" value="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="DIRECTORY" name="TEMP_DIR" show="false" value="&quot;C:/TOS_BD-20161216_1026-V6.3.1/workspace&quot;"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" show="false" value="&quot;,&quot;"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" show="false" value="&quot;.&quot;"/>
+    <elementParameter field="CHECK" name="RANDOM" value="false"/>
+    <elementParameter field="TEXT" name="NB_RANDOM" show="false" value="10"/>
+    <elementParameter field="CHECK" name="TRIMALL" value="false"/>
+    <elementParameter field="TABLE" name="TRIMSELECT">
+      <elementValue elementRef="SCHEMA_COLUMN" value="all_columns"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="CHECK_FIELDS_NUM" value="false"/>
+    <elementParameter field="CHECK" name="CHECK_DATE" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8"/>
+    <elementParameter field="CHECK" name="SPLITRECORD" value="false"/>
+    <elementParameter field="CHECK" name="ENABLE_DECODE" value="false"/>
+    <elementParameter field="TABLE" name="DECODE_COLS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="all_columns"/>
+      <elementValue elementRef="DECODE" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="DESTINATION" show="false" value=""/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
+    <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__&lt;br&gt;&lt;b&gt;Read File header &lt;/b&gt;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileInputDelimited_1">
+      <column comment="" key="false" length="-1" name="all_columns" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" length="-1" name="all_columns" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="288" posY="640">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_1"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="String data = &quot;&quot;;&#13;&#10;&#13;&#10;&#13;&#10;String all_columns=input_row.all_columns;&#13;&#10;&#13;&#10;//System.out.println(&quot;....all_columns........&quot;+all_columns);&#13;&#10;&#13;&#10;all_columns=all_columns.substring(0, all_columns.length());&#13;&#10;int column_position=1;&#13;&#10;int temp=0;&#13;&#10;String arr[]=all_columns.split(context.input_file_delimiter+&quot;(?=(?:[^\&quot;]*\&quot;[^\&quot;]*\&quot;)*[^\&quot;]*$)&quot;, -1);&#13;&#10;&#13;&#10;//System.out.println(&quot;............&quot;+arr.length);&#13;&#10;while(column_position&lt;=arr.length)&#13;&#10;{&#13;&#10;&#13;&#10;//System.out.println(&quot;............Inside -while&quot;);&#13;&#10;//System.out.println(&quot;............&quot;+globalMap.get(&quot;column_name&quot;+column_position));&#13;&#10;&#9;String current_column= arr[column_position -1].trim();&#13;&#10;&#9;if (temp==0)&#13;&#10;&#9;{&#13;&#10;&#9;&#9;data =   globalMap.get(&quot;column_name&quot;+column_position).toString();&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;temp++;&#13;&#10;&#9;&#9;//data = &quot;\&quot;&quot; + globalMap.get(&quot;column_name&quot;+column_position) + &quot;\&quot;&quot; ;&#13;&#10;&#9;&#9;temp++;&#13;&#10;&#9;&#9;&#13;&#10;&#9;}&#13;&#10;&#9;else&#13;&#10;&#9;data = data  + context.input_file_delimiter +  globalMap.get(&quot;column_name&quot;+column_position) ;&#13;&#10;&#9;column_position++;&#13;&#10;&#9;&#13;&#10;}&#13;&#10;&#9;&#13;&#10;&#9;output_row.data=data+&quot;;IMCM_SYS_CREATED;IMCM_SYS_UPDATED;IMCM_SYS_DELETED;IMCM_IS_DELETED&quot;;&#13;&#10;&#9;output_row.error_flag=0;&#13;&#10;  &#9;output_row.message=&quot;&quot;;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;&#13;&#10;import java.util.StringTokenizer;"/>
+    <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__&lt;br&gt;&lt;b&gt;Set Header with extra columns&lt;/b&gt;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJavaRow_1">
+      <column comment="" key="false" length="-1" name="message" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="error_flag" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="data" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="448" posY="640">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_RIgzcIuIEeiB_rj4ohvN7A-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
+    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__&lt;br&gt;&lt;b&gt;Filter columns&lt;/b&gt;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="headerdata">
+      <column comment="" key="false" length="-1" name="data" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="FLOW" name="header_rejecteddata">
+      <column comment="" key="false" length="-1" name="data" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables name="headerdata" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="row4.data " name="data" nullable="true" type="id_String"/>
+      </outputTables>
+      <outputTables name="header_rejecteddata" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="row4.data " name="data" nullable="true" type="id_String"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row4" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="message" nullable="true" type="id_String"/>
+        <mapperTableEntries name="error_flag" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="data" nullable="true" type="id_String"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="640" posY="640">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputDelimited_1"/>
+    <elementParameter field="CHECK" name="USESTREAM" value="false"/>
+    <elementParameter field="TEXT" name="STREAMNAME" show="false" value="outputStream"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.Intermediate_Filepath_DQCheck_Pass_IRDA+context.filename"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
+    <elementParameter field="CHECK" name="OS_LINE_SEPARATOR_AS_ROW_SEPARATOR" show="false" value="true"/>
+    <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;"/>
+    <elementParameter field="CHECK" name="APPEND" value="false"/>
+    <elementParameter field="CHECK" name="INCLUDEHEADER" value="false"/>
+    <elementParameter field="CHECK" name="COMPRESS" value="false"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" show="false" value="&quot;,&quot;"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" show="false" value="&quot;.&quot;"/>
+    <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
+    <elementParameter field="TEXT" name="ESCAPE_CHAR" show="false" value="&quot;&quot;&quot;"/>
+    <elementParameter field="TEXT" name="TEXT_ENCLOSURE" show="false" value="&quot;&quot;&quot;"/>
+    <elementParameter field="CHECK" name="CREATE" value="true"/>
+    <elementParameter field="CHECK" name="SPLIT" value="false"/>
+    <elementParameter field="TEXT" name="SPLIT_EVERY" show="false" value="1000"/>
+    <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
+    <elementParameter field="TEXT" name="FLUSHONROW_NUM" show="false" value="1"/>
+    <elementParameter field="CHECK" name="ROW_MODE" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8"/>
+    <elementParameter field="CHECK" name="DELETE_EMPTYFILE" value="false"/>
+    <elementParameter field="CHECK" name="FILE_EXIST_EXCEPTION" value="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="90"/>
+    <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__&lt;br&gt;&lt;b&gt;Save Valid Header&lt;/b&gt;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileOutputDelimited_1">
+      <column comment="" key="false" length="-1" name="data" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="768">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputDelimited_4"/>
+    <elementParameter field="LABEL" name="FILENAMETEXT" value="&quot;When the input source is a stream or a zip file,footer and random shouldn't be bigger than 0.&quot;"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.Path+context.filename"/>
+    <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
+    <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;\nklm34&quot;"/>
+    <elementParameter field="TEXT" name="ESCAPE_CHAR" show="false" value="&quot;;&quot;"/>
+    <elementParameter field="TEXT" name="TEXT_ENCLOSURE" show="false" value="&quot;&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HEADER" value="1"/>
+    <elementParameter field="TEXT" name="FOOTER" value="0"/>
+    <elementParameter field="TEXT" name="LIMIT" value=""/>
+    <elementParameter field="CHECK" name="REMOVE_EMPTY_ROW" value="true"/>
+    <elementParameter field="CHECK" name="UNCOMPRESS" value="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="DIRECTORY" name="TEMP_DIR" show="false" value="&quot;C:/TOS_BD-20161216_1026-V6.3.1/workspace&quot;"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" show="false" value="&quot;,&quot;"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" show="false" value="&quot;.&quot;"/>
+    <elementParameter field="CHECK" name="RANDOM" value="false"/>
+    <elementParameter field="TEXT" name="NB_RANDOM" show="false" value="10"/>
+    <elementParameter field="CHECK" name="TRIMALL" value="false"/>
+    <elementParameter field="TABLE" name="TRIMSELECT">
+      <elementValue elementRef="SCHEMA_COLUMN" value="all_columns"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="CHECK_FIELDS_NUM" value="false"/>
+    <elementParameter field="CHECK" name="CHECK_DATE" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8"/>
+    <elementParameter field="CHECK" name="SPLITRECORD" value="false"/>
+    <elementParameter field="CHECK" name="ENABLE_DECODE" value="false"/>
+    <elementParameter field="TABLE" name="DECODE_COLS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="all_columns"/>
+      <elementValue elementRef="DECODE" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="DESTINATION" show="false" value=""/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
+    <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__&lt;br&gt;&lt;b&gt;Read File data&lt;/b&gt;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileInputDelimited_4">
+      <column comment="" key="false" length="-1" name="all_columns" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" length="-1" name="all_columns" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="448" posY="768">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_4"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="String all_columns=input_row.all_columns;&#13;&#10;String formattedValue = &quot;&quot;;&#13;&#10;SimpleDateFormat s_final = new SimpleDateFormat(&quot;yyyy-MM-dd HH:mm:ss&quot;);&#13;&#10;int numberOfCol=((Integer)globalMap.get(&quot;tPostgresqlInput_1_NB_LINE&quot;));&#13;&#10;String current_column_data=&quot;&quot;;&#13;&#10;String reject_column_data=&quot;&quot;;&#13;&#10;String error_desc = &quot;&quot; ;&#13;&#10;int column_position=1;&#13;&#10;int temp=0;&#13;&#10;int validation_flag = 0 ;&#13;&#10;int compositeColCounter=0;&#13;&#10;String compositeColValue=&quot;&quot;;&#13;&#10;String compositeColName=&quot;&quot;;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;try{&#13;&#10;&#13;&#10;all_columns = StringUtils.normalizeSpace(all_columns);            // this is in place to improve performance&#13;&#10;                        //all_columns = all_columns.trim().replaceAll(&quot; +&quot;, &quot; &quot;);       // commented this line from original code&#13;&#10;                        all_columns = all_columns.replaceAll(&quot;”&quot;, &quot;'&quot;);                   // new line of code&#13;&#10;                        all_columns = all_columns.replaceAll(&quot;\&quot;\&quot;\&quot;&quot;, &quot;\&quot;'&quot;);            // new line of code&#13;&#10;                        all_columns = all_columns.replaceAll(&quot;\&quot;\&quot;&quot;, &quot;'&quot;);                // this line has to stay uncommented&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;//System.out.println(context.input_file_delimiter+&quot;(?=(?:[^\&quot;]*\&quot;[^\&quot;]*\&quot;)*[^\&quot;]*$)&quot;);&#13;&#10;//System.out.println(numberOfCol);&#13;&#10;//System.out.println(arr.length);&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;if(arr.length==numberOfCol)&#13;&#10;{&#13;&#10;&#13;&#10;if(globalMap.get(&quot;IsDQCheckApplicable&quot;)==null || globalMap.get(&quot;IsDQCheckApplicable&quot;).toString().equals(&quot;&quot;) || globalMap.get(&quot;IsDQCheckApplicable&quot;).toString().equals(&quot;0&quot;))&#13;&#10;{&#13;&#10;&#9;&#9;//System.out.println(&quot;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX     DQ CHECK IS NOT HAPPENING      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&quot;);&#13;&#10;&#9;&#9;current_column_data =  all_columns  ;&#13;&#10;&#9;&#9;context.pass_counter=0;&#13;&#10;&#9;&#9;validation_flag=0;&#13;&#10;}&#13;&#10;else {&#13;&#10;//System.out.println(&quot;test1&quot;);&#13;&#10;while(column_position&lt;=arr.length)&#13;&#10;{&#13;&#10;       String current_column= arr[column_position -1].trim();&#13;&#10;       if (current_column.startsWith(&quot;\&quot;&quot;) &amp;&amp; current_column.endsWith(&quot;\&quot;&quot;))&#13;&#10;       {&#13;&#10;              //System.out.println(&quot;Inside IF 1&quot;);   &#13;&#10;                           current_column=current_column.substring(1,current_column.length()-1);&#13;&#10;       }&#13;&#10;       else &#13;&#10;       {}&#13;&#10;       &#13;&#10;       current_column=StringEscapeUtils.unescapeCsv(current_column);&#13;&#10;       &#13;&#10;       &#13;&#10;       if (globalMap.get(&quot;decimal_separator&quot;+column_position)==null || globalMap.get(&quot;decimal_separator&quot;+column_position).equals(&quot;&quot;))&#13;&#10;       {}&#13;&#10;       else&#13;&#10;       current_column=current_column.replace(globalMap.get(&quot;decimal_separator&quot;+column_position).toString(),&quot;.&quot;);&#13;&#10;       //System.out.println(current_column);&#13;&#10;       &#13;&#10;       &#13;&#10;       &#13;&#10;       //System.out.println(current_column);&#13;&#10;       &#13;&#10;       &#13;&#10;       //int current_column_length= current_column.trim().length();&#13;&#10;       &#13;&#10;              &#13;&#10;       &#13;&#10;    //System.out.println(&quot;test2&quot;);&#13;&#10;&#13;&#10;       if(globalMap.get(&quot;null_check&quot;+column_position).toString().equals(&quot;1&quot;))&#13;&#10;       {&#13;&#10;              if(current_column.trim().length()==0)&#13;&#10;              {&#13;&#10;                     error_desc=&quot;Null Value: &quot;+(String)globalMap.get(&quot;column_name&quot;+column_position)+&quot; is null;&quot;;&#13;&#10;                     validation_flag=1;&#13;&#10;                     if(globalMap.get(&quot;column_type&quot;+column_position).toString().toLowerCase().contains(&quot;char&quot;)|| &#13;&#10;                     globalMap.get(&quot;column_type&quot;+column_position).toString().toLowerCase().contains(&quot;uniqueidentifier&quot;) ||&#13;&#10;                     globalMap.get(&quot;column_type&quot;+column_position).toString().toLowerCase().contains(&quot;string&quot;) )&#13;&#10;   &#9;&#9;&#9;&#9;{&#13;&#10;&#9;&#9;&#9;&#9;&#9;//System.out.println(&quot; INSIDE CHAR COLUMN &quot;);&#13;&#10;   &#9;&#9;&#9;&#9;&#9;current_column= &quot;UNSPECIFIED&quot;;&#13;&#10;   &#9;&#9;&#9;&#9;}else {}//equals(&quot;Date&quot;)&#13;&#10;   &#9;&#9;&#9;&#9;if(globalMap.get(&quot;column_type&quot;+column_position).toString().toLowerCase().contains(&quot;int&quot;)||globalMap.get(&quot;column_type&quot;+column_position).toString().toLowerCase().contains(&quot;number&quot;)&#13;&#10;   &#9;&#9;&#9;&#9;&#13;&#10;   &#9;&#9;&#9;&#9;&#9;&#9;&#9;|| globalMap.get(&quot;column_type&quot;+column_position).toString().toLowerCase().contains(&quot;boolean&quot;) )&#13;&#10;   &#9;&#9;&#9;&#9;{&#13;&#10;   &#9;&#9;&#9;&#9;&#9;current_column= &quot;0&quot;;&#13;&#10;   &#9;&#9;&#9;&#9;}else {}//equals(&quot;Date&quot;)&#13;&#10;   &#9;&#9;&#9;&#9;/*Date default conditions has to be written considering the date format ------&gt; PLEASE FILL IN WITH RELEVANT CONDITIONS&#13;&#10;*/&#13;&#10;&#13;&#10;   &#9;&#9;&#9;&#9;if(globalMap.get(&quot;column_type&quot;+column_position).toString().toLowerCase().contains(&quot;date&quot;)||globalMap.get(&quot;column_type&quot;+column_position).toString().toLowerCase().contains(&quot;timestamp&quot;))&#13;&#10;   &#9;&#9;&#9;&#9;{&#13;&#10;&#9;&#9;&#9;&#9;&#9;//System.out.println(&quot; INSIDE DATE COLUMN &quot;);&#13;&#10;   &#9;&#9;&#9;&#9;&#9;current_column= &quot;2999-12-12&quot;;&#13;&#10;   &#9;&#9;&#9;&#9;&#9;//System.out.println(&quot; In Between  DATE COLUMN &quot; +current_column);&#13;&#10;   &#9;&#9;&#9;&#9;&#9;&#13;&#10;   &#9;&#9;&#9;&#9;}else {}&#13;&#10;                     &#13;&#10;                     &#13;&#10;              }else {}&#13;&#10;                     &#13;&#10;       }&#13;&#10;       else {}&#13;&#10;       &#13;&#10;       //System.out.println(&quot; Outside DATE COLUMN &quot; + current_column);&#13;&#10;       &#13;&#10;    //System.out.println(&quot;test3&quot;);&#13;&#10;    &#13;&#10;    int current_column_length = current_column.trim().length();&#13;&#10;&#13;&#10;    if (current_column_length!= 0)&#13;&#10;   {                 &#13;&#10;       if ((globalMap.get(&quot;column_type&quot;+column_position).toString().equals(&quot;Date&quot;)) &amp;&amp; (globalMap.get(&quot;column_format&quot;+column_position).toString().equals(&quot;yyyy/MM/dd&quot;)))&#13;&#10;                {current_column = current_column.replace(&quot; &quot;,&quot;&quot;);       &#13;&#10;                 current_column_length= current_column.trim().length();}    &#13;&#10;     else {}  &#13;&#10;    }&#13;&#10;    //System.out.println(&quot;test4 ---  Checking for Column Length&quot;);&#13;&#10;    &#13;&#10;   // int current_column_length= current_column.trim().length();&#13;&#10;    if (current_column_length!= 0)&#13;&#10;   {&#9;&#9;&#9;&#13;&#10;&#9;&#9;if ((globalMap.get(&quot;column_type&quot;+column_position).toString().equals(&quot;Date&quot;)) &amp;&amp; (globalMap.get(&quot;column_format&quot;+column_position).toString().equals(&quot;yyyy/MM/dd&quot;)))&#13;&#10;&#9;    {&#9;&#13;&#10;&#9;    &#9;current_column = current_column.replace(&quot; &quot;,&quot;&quot;);&#9;&#13;&#10;&#9;    &#9;current_column_length= current_column.trim().length();&#13;&#10;&#9;    }&#9;&#13;&#10;     &#9;else {}&#9;&#13;&#10;    }&#13;&#10;    &#13;&#10;&#9;&#13;&#10;    if (current_column_length!= 0)&#13;&#10;&#9;{&#13;&#10;&#9; &#13;&#10;    &#9;if(current_column_length&gt;Integer.parseInt(globalMap.get(&quot;column_length&quot;+column_position).toString()))&#13;&#10;    &#9;{&#13;&#10;    &#9;&#9;error_desc=&quot;Error: &quot;+(String)globalMap.get(&quot;column_name&quot;+column_position)+&quot; exceeds schema length &quot;+globalMap.get(&quot;column_length&quot;+column_position);&#13;&#10;&#9;&#9;&#9;validation_flag=1;&#13;&#10;&#9;&#9;&#9;&#13;&#10;&#9;&#9;&#9;// Ma&#13;&#10;&#9;&#9;&#9;if(globalMap.get(&quot;column_type&quot;+column_position).toString().toLowerCase().contains(&quot;char&quot;)|| &#13;&#10;globalMap.get(&quot;column_type&quot;+column_position).toString().toLowerCase().contains(&quot;string&quot;) ||&#13;&#10;globalMap.get(&quot;column_type&quot;+column_position).toString().toLowerCase().contains(&quot;uniqueidentifier&quot;)&#13;&#10; )&#13;&#10;&#9;&#9;&#9;&#13;&#10;   &#9;&#9;&#9;&#9;{&#13;&#10;   &#9;&#9;&#9;&#9;&#9;current_column= &quot;UNSPECIFIED&quot;;&#13;&#10;   &#9;&#9;&#9;&#9;}else {}//equals(&quot;Date&quot;)&#13;&#10;   &#9;&#9;&#9;&#9;if(globalMap.get(&quot;column_type&quot;+column_position).toString().toLowerCase().contains(&quot;int&quot;)||globalMap.get(&quot;column_type&quot;+column_position).toString().toLowerCase().contains(&quot;number&quot;)|| globalMap.get(&quot;column_type&quot;+column_position).toString().toLowerCase().contains(&quot;boolean&quot;) )&#13;&#10;   &#9;&#9;&#9;&#9;{&#13;&#10;   &#9;&#9;&#9;&#9;&#9;current_column= &quot;0&quot;;&#13;&#10;   &#9;&#9;&#9;&#9;}else {}&#13;&#10;&#13;&#10;    &#9;}&#13;&#10;    }    &#13;&#10;    &#13;&#10;       &#13;&#10;    &#13;&#10;    &#13;&#10;    //System.out.println((String )globalMap.get(&quot;column_type&quot;+column_position));&#13;&#10;    &#13;&#10;    &#13;&#10;    //Checking for unique values&#9;&#9;&#13;&#10;&#9;if (!(globalMap.get(&quot;is_unique&quot;+column_position)==null || globalMap.get(&quot;is_unique&quot;+column_position).equals(&quot;&quot;) || globalMap.get(&quot;is_unique&quot;+column_position).equals(&quot;0&quot;)))&#13;&#10;&#9;{&#13;&#10;&#9;&#9;if(globalMap.get(&quot;is_unique&quot;+column_position).toString().equals(&quot;1&quot;))&#13;&#10;&#9;&#9;{&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;&#9;Set&lt;String&gt; uniqueList = (HashSet&lt;String&gt;)globalMap.get(&quot;unique_list&quot;);&#13;&#10;&#13;&#10;&#9;&#9;&#9;if(uniqueList.add(column_position+&quot;_&quot;+current_column)==false)&#13;&#10;&#9;&#9;&#9;{&#13;&#10;&#9;&#9;&#9;&#9;error_desc=&quot;Dublicate Value: &quot;+(String)globalMap.get(&quot;column_name&quot;+column_position)+&quot; is not unique&quot;;&#13;&#10;   &#9;&#9;&#9;&#9;validation_flag=1;&#13;&#10;   &#9;&#9;&#9;&#9;if(globalMap.get(&quot;column_type&quot;+column_position).toString().toLowerCase().contains(&quot;char&quot;)|| globalMap.get(&quot;column_type&quot;+column_position).toString().toLowerCase().contains(&quot;string&quot;) )&#13;&#10;   &#9;&#9;&#9;&#9;{&#13;&#10;   &#9;&#9;&#9;&#9;&#9;current_column= current_column+&quot;_REJ&quot;;&#13;&#10;   &#9;&#9;&#9;&#9;}else {}&#13;&#10;   &#9;&#9;&#9;&#9;if(globalMap.get(&quot;column_type&quot;+column_position).toString().toLowerCase().contains(&quot;int&quot;)||globalMap.get(&quot;column_type&quot;+column_position).toString().toLowerCase().contains(&quot;number&quot;) )&#13;&#10;   &#9;&#9;&#9;&#9;{&#13;&#10;   &#9;&#9;&#9;&#9;&#9;current_column= current_column+&quot;999&quot;;&#13;&#10;   &#9;&#9;&#9;&#9;}else {}&#13;&#10;   &#9;&#9;&#9;&#9;&#13;&#10;&#9;&#9;&#9;}else {}&#13;&#10;&#9;&#9;&#9;&#13;&#10;&#9;&#9;&#9;globalMap.put(&quot;unique_list&quot;,uniqueList);&#13;&#10;&#9;&#9;&#9;&#13;&#10;&#9;&#9;}&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;else &#13;&#10;&#9;&#9;{&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;&#9;if((Integer.valueOf(globalMap.get(&quot;is_unique&quot;+column_position).toString())-1)==compositeColCounter)&#13;&#10;&#9;&#9;&#9;{&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;&#9;&#9;compositeColValue=compositeColValue + &quot;_&quot; +current_column;&#13;&#10;&#9;&#9;&#9;&#9;compositeColName=compositeColName + &quot; &quot; + (String)globalMap.get(&quot;column_name&quot;+column_position);&#13;&#10;&#9;&#9;&#9;&#9;Set&lt;String&gt; uniqueList = (HashSet&lt;String&gt;)globalMap.get(&quot;unique_list&quot;);&#13;&#10;&#13;&#10;&#9;&#9;&#9;&#9;if(uniqueList.add(compositeColValue)==false)&#13;&#10;&#9;&#9;&#9;&#9;{&#13;&#10;&#9;&#9;&#9;&#9;&#9;error_desc=&quot;Dublicate Value: &quot;+compositeColName+&quot; is not unique&quot;;&#13;&#10;   &#9;&#9;&#9;&#9;&#9;validation_flag=1;&#13;&#10;   &#9;&#9;&#9;&#9;if(globalMap.get(&quot;column_type&quot;+column_position).toString().toLowerCase().contains(&quot;char&quot;)|| globalMap.get(&quot;column_type&quot;+column_position).toString().toLowerCase().contains(&quot;string&quot;) )&#13;&#10;   &#9;&#9;&#9;&#9;{&#13;&#10;   &#9;&#9;&#9;&#9;&#9;current_column= current_column+&quot;_REJ&quot;;&#13;&#10;   &#9;&#9;&#9;&#9;}else {}&#13;&#10;   &#9;&#9;&#9;&#9;if(globalMap.get(&quot;column_type&quot;+column_position).toString().toLowerCase().contains(&quot;int&quot;)||globalMap.get(&quot;column_type&quot;+column_position).toString().toLowerCase().contains(&quot;number&quot;) )&#13;&#10;   &#9;&#9;&#9;&#9;{&#13;&#10;   &#9;&#9;&#9;&#9;&#9;current_column= current_column+&quot;999&quot;;&#13;&#10;   &#9;&#9;&#9;&#9;}else {}&#13;&#10;&#13;&#10;   &#9;&#9;&#9;&#9;&#9;&#13;&#10;&#9;&#9;&#9;&#9;}else {}&#13;&#10;&#9;&#9;&#9;&#13;&#10;&#9;&#9;&#9;&#9;globalMap.put(&quot;unique_list&quot;,uniqueList);&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;&#9;}&#9;&#13;&#10;&#9;&#9;&#9;&#13;&#10;&#9;&#9;&#9;else&#13;&#10;&#9;&#9;&#9;{&#13;&#10;&#9;&#9;&#9;&#9;compositeColCounter++;&#13;&#10;&#9;&#9;&#9;&#9;compositeColValue=compositeColValue +&quot;_&quot;+ current_column;&#13;&#10;&#9;&#9;&#9;&#9;compositeColName=compositeColName + &quot; &quot; + (String)globalMap.get(&quot;column_name&quot;+column_position);&#13;&#10;&#9;&#9;&#9;}&#13;&#10;&#9;&#9;&#9;&#13;&#10;&#9;&#9;}&#9;&#13;&#10;&#9;&#13;&#10;&#9;}else {}&#13;&#10;        &#13;&#10;       //System.out.println(&quot;test5&quot;);        &#13;&#10;       switch ((String )globalMap.get(&quot;column_type&quot;+column_position))&#13;&#10;              {&#13;&#10;              &#13;&#10;       case &quot;Int&quot;:&#13;&#10;                           try{&#13;&#10;                           &#13;&#10;                           if(current_column.trim().length()&gt;0 ){&#13;&#10;                              Integer i=Integer.parseInt(current_column);}else{}&#13;&#10;                              }&#13;&#10;                                 catch(Exception e)&#13;&#10;                                    {&#13;&#10;                                    validation_flag=1;&#13;&#10;                                       error_desc=&quot;Incompatible data types expected INT, Found - &quot; + (String)globalMap.get(&quot;column_name&quot;+column_position) &#13;&#10;;   &#13;&#10;                                    }&#13;&#10;                                                break;&#13;&#10;                                  &#13;&#10;              case &quot;Long&quot;:&#13;&#10;                           try{if(current_column.trim().length()&gt;0)&#13;&#10;                           {&#13;&#10;                              Long i=Long.parseLong(current_column);&#13;&#10;                              }&#13;&#10;                              else&#13;&#10;                              {}&#13;&#10;                           }   &#13;&#10;                              &#13;&#10;                                 catch(Exception e)&#13;&#10;                                    {&#13;&#10;                                    validation_flag=1;&#13;&#10;                                       error_desc=&quot;Incompatible data types expected Long, Found - &quot;+ (String)globalMap.get(&quot;column_name&quot;+column_position);   &#13;&#10;                                    }&#13;&#10;                                                break;&#13;&#10;                                  &#13;&#10;&#13;&#10;                     case &quot;Float&quot;:&#13;&#10;                           try{if(current_column.trim().length()&gt;0.0)&#13;&#10;                                   {Float i=Float.parseFloat(current_column);}&#13;&#10;                                   else {}&#13;&#10;                              }&#13;&#10;                                     catch(Exception e)&#13;&#10;                                         {&#13;&#10;                                         &#13;&#10;                                         validation_flag=1;&#13;&#10;                                      error_desc= &quot;Incompatible data types expected Float, Found - &quot; + (String)globalMap.get(&quot;column_name&quot;+column_position);   &#13;&#10;                                         }&#13;&#10;                                                break;&#13;&#10;                                  &#13;&#10;                           case &quot;Date&quot;:&#13;&#10;                                  try{if(current_column.trim().length()&gt;0){&#13;&#10;                                         //SimpleDateFormat s = new SimpleDateFormat(&quot;EEE MMM dd HH:mm:ss z yyyy&quot;);&#13;&#10;                                  &#13;&#10;                                  SimpleDateFormat s = (SimpleDateFormat)globalMap.get(&quot;date_column_format_obj&quot;+column_position);&#13;&#10;                                  Date C_Date = s.parse(current_column);&#13;&#10;                                  current_column = s_final.format(C_Date);}else{}&#13;&#10;                                  &#13;&#10;                                         }&#13;&#10;                                         catch(Exception p)&#13;&#10;                                         {&#13;&#10;                                         validation_flag=1;&#13;&#10;                                         error_desc= &quot;Incompatible date format- &quot;+ (String)globalMap.get(&quot;column_name&quot;+column_position) ;   &#13;&#10;                                                                                  &#13;&#10;                                         }&#13;&#10;                                                break;&#13;&#10;                     }&#13;&#10;                                                &#13;&#10;                                                &#13;&#10;       formattedValue =  current_column ; &#13;&#10;       formattedValue=formattedValue.replaceAll(&quot;[\\n]+&quot;,&quot; &quot;);                            &#13;&#10;                                                &#13;&#10;       if (current_column != null || current_column.equals(&quot;&quot;)) {&#13;&#10;                                  int intIndexofDelimiter = formattedValue.indexOf(context.delimiter);&#13;&#10;                                  if (intIndexofDelimiter &gt;= 0)  {&#13;&#10;                                         formattedValue = &quot;,&quot;.concat(formattedValue);&#13;&#10;                                  }&#13;&#10;                                 formattedValue = StringEscapeUtils.escapeCsv(formattedValue);&#13;&#10;                           &#13;&#10;                                  if (intIndexofDelimiter &gt;= 0) {&#13;&#10;                                         formattedValue = formattedValue.replaceFirst(&quot;,&quot;, &quot;&quot;);&#13;&#10;                                  }&#13;&#10;       } &#13;&#10;       &#13;&#10;       else &#13;&#10;              formattedValue = &quot;&quot;;     &#13;&#10;                                                &#13;&#10;       current_column = formattedValue;&#13;&#10;                                                &#13;&#10;//System.out.println(&quot;test7&quot;);                       &#13;&#10;       if (temp==0)&#13;&#10;       {&#13;&#10;      current_column_data =  current_column  ;&#13;&#10;       temp=1;&#13;&#10;       }&#13;&#10;       &#13;&#10;       else&#13;&#10;       current_column_data = current_column_data  + context.delimiter + current_column  ;&#13;&#10;       &#13;&#10;       column_position++;&#13;&#10;              &#13;&#10;}&#13;&#10;&#13;&#10;}&#13;&#10;}&#13;&#10;&#13;&#10;&#13;&#10;else{&#13;&#10;&#13;&#10;       while(column_position&lt;=arr.length)&#13;&#10;       {&#13;&#10;&#13;&#10;              String current_column= arr[column_position -1].trim();&#13;&#10;                     &#13;&#10;              if (temp==0)&#13;&#10;              {&#13;&#10;                    current_column_data = current_column  ;&#13;&#10;                     temp=1;&#13;&#10;              }&#13;&#10;       &#13;&#10;              else&#13;&#10;                     current_column_data = current_column_data  + context.delimiter + current_column  ;&#13;&#10;       &#13;&#10;              column_position++;&#13;&#10;       }&#13;&#10;       validation_flag=1;&#13;&#10;       error_desc=&quot;Number of column in the file is not matching with the matadata&quot; ; &#13;&#10;&#13;&#10;}&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;//System.out.println(&quot;test7&quot;);&#13;&#10;/*VALIDATION FLAG HAS TO CHECKED&#13;&#10;if(context.pass_counter==0 &amp;&amp; validation_flag==0)&#13;&#10;*/&#13;&#10;&#13;&#10;if(context.pass_counter==0){&#13;&#10;       current_column_data=current_column_data;&#13;&#10;       context.pass_counter++;&#13;&#10;}&#13;&#10;else   &#13;&#10;{}&#13;&#10;&#13;&#10;&#13;&#10;if(validation_flag==1)&#13;&#10;{      if(context.reject_counter==0){&#13;&#10;       reject_column_data=&quot;message&quot; + context.delimiter + &quot;error_flag&quot; + context.delimiter + context.file_header +&quot;\n&quot; + error_desc + context.delimiter + validation_flag +      context.delimiter + current_column_data;&#13;&#10;       context.reject_counter++;&#13;&#10;       }&#13;&#10;       else&#13;&#10;       reject_column_data=error_desc + context.delimiter + validation_flag + context.delimiter + current_column_data;&#13;&#10;       &#13;&#10;}&#13;&#10;&#13;&#10;else{}&#13;&#10;&#13;&#10;}&#13;&#10;catch (Exception e) {&#13;&#10;                     e.printStackTrace();&#13;&#10;                     }&#13;&#10;row10.data=current_column_data;&#13;&#10;row10.error_flag=validation_flag;&#13;&#10;row10.message=error_desc;  &#13;&#10;row10.reject=reject_column_data;&#13;&#10;&#13;&#10;&#13;&#10;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="import java.util.List;&#13;&#10;import java.util.StringTokenizer;&#13;&#10;import org.apache.commons.text.StringEscapeUtils;&#13;&#10;import java.util.regex.Pattern;&#13;&#10;import org.apache.commons.lang.StringUtils;&#13;&#10;&#13;&#10;import java.io.BufferedReader;&#13;&#10;import java.io.File;&#13;&#10;import java.io.FileReader;&#13;&#10;import java.util.Set;&#13;&#10;import java.util.HashSet; "/>
+    <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__&lt;br&gt;&lt;b&gt;Apply DQ Checks&lt;/b&gt;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJavaRow_4">
+      <column comment="" key="false" length="-1" name="message" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="error_flag" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="data" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="reject" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="832" posY="768">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_3"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_RIgzcIuIEeiB_rj4ohvN7A-tMap_3-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
+    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="5000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__&lt;br&gt;&lt;b&gt;Filter Records&lt;/b&gt;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="copyOfrecords">
+      <column comment="" key="false" length="-1" name="data" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="FLOW" name="copyOfrejected_records">
+      <column comment="" key="false" length="-1" name="message" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="error_flag" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="data" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables activateExpressionFilter="true" name="copyOfrecords" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="row10.data " name="data" nullable="true" type="id_String"/>
+      </outputTables>
+      <outputTables activateExpressionFilter="true" expressionFilter="row10.error_flag==1" name="copyOfrejected_records" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="row10.message " name="message" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row10.error_flag " name="error_flag" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="row10.reject" name="data" nullable="true" type="id_String"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row10" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="message" nullable="true" type="id_String"/>
+        <mapperTableEntries name="error_flag" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="data" nullable="true" type="id_String"/>
+        <mapperTableEntries name="reject" nullable="true" type="id_String"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1120" posY="768">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputDelimited_5"/>
+    <elementParameter field="CHECK" name="USESTREAM" value="false"/>
+    <elementParameter field="TEXT" name="STREAMNAME" show="false" value="outputStream"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.Intermediate_Filepath_DQCheck_Pass_IRDA+context.filename"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
+    <elementParameter field="CHECK" name="OS_LINE_SEPARATOR_AS_ROW_SEPARATOR" show="false" value="true"/>
+    <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;"/>
+    <elementParameter field="CHECK" name="APPEND" value="true"/>
+    <elementParameter field="CHECK" name="INCLUDEHEADER" value="false"/>
+    <elementParameter field="CHECK" name="COMPRESS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" show="false" value="&quot;,&quot;"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" show="false" value="&quot;.&quot;"/>
+    <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
+    <elementParameter field="TEXT" name="ESCAPE_CHAR" show="false" value="&quot;&quot;&quot;"/>
+    <elementParameter field="TEXT" name="TEXT_ENCLOSURE" show="false" value="&quot;&quot;&quot;"/>
+    <elementParameter field="CHECK" name="CREATE" value="true"/>
+    <elementParameter field="CHECK" name="SPLIT" value="false"/>
+    <elementParameter field="TEXT" name="SPLIT_EVERY" show="false" value="1000"/>
+    <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
+    <elementParameter field="TEXT" name="FLUSHONROW_NUM" show="false" value="1"/>
+    <elementParameter field="CHECK" name="ROW_MODE" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8"/>
+    <elementParameter field="CHECK" name="DELETE_EMPTYFILE" value="true"/>
+    <elementParameter field="CHECK" name="FILE_EXIST_EXCEPTION" show="false" value="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="90"/>
+    <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__&lt;br&gt;&lt;b&gt;Save Valid Records&lt;/b&gt;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileOutputDelimited_5">
+      <column comment="" key="false" length="-1" name="data" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1120" posY="928">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputDelimited_6"/>
+    <elementParameter field="CHECK" name="USESTREAM" value="false"/>
+    <elementParameter field="TEXT" name="STREAMNAME" show="false" value="outputStream"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.Intermediate_Filepath_DQCheck_Rejects_IRDA+context.filename"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
+    <elementParameter field="CHECK" name="OS_LINE_SEPARATOR_AS_ROW_SEPARATOR" show="false" value="true"/>
+    <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;"/>
+    <elementParameter field="CHECK" name="APPEND" value="false"/>
+    <elementParameter field="CHECK" name="INCLUDEHEADER" value="false"/>
+    <elementParameter field="CHECK" name="COMPRESS" value="false"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" show="false" value="&quot;,&quot;"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" show="false" value="&quot;.&quot;"/>
+    <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
+    <elementParameter field="TEXT" name="ESCAPE_CHAR" show="false" value="&quot;&quot;&quot;"/>
+    <elementParameter field="TEXT" name="TEXT_ENCLOSURE" show="false" value="&quot;&quot;&quot;"/>
+    <elementParameter field="CHECK" name="CREATE" value="true"/>
+    <elementParameter field="CHECK" name="SPLIT" value="false"/>
+    <elementParameter field="TEXT" name="SPLIT_EVERY" show="false" value="1000"/>
+    <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
+    <elementParameter field="TEXT" name="FLUSHONROW_NUM" show="false" value="1"/>
+    <elementParameter field="CHECK" name="ROW_MODE" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8"/>
+    <elementParameter field="CHECK" name="DELETE_EMPTYFILE" value="true"/>
+    <elementParameter field="CHECK" name="FILE_EXIST_EXCEPTION" value="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="90"/>
+    <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__&lt;br&gt;&lt;b&gt;Save Rejected Records&lt;/b&gt;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileOutputDelimited_6">
+      <column comment="" key="false" length="-1" name="message" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="error_flag" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="data" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="128" posY="-96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_3"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="&#13;&#10;context.Bucket=context.S3Raw;&#13;&#10;context.Path=context.Intermediate_Filepath_RawS3;&#13;&#10;context.SourceName=context.SourceDB.substring(5,StringHandling.LEN(context.SourceDB));&#13;&#10;context.filename=&quot;(&quot;+context.clientId+&quot;)&quot;+context.product+context.channel+&#13;&#10;context.source+&quot;(&quot;+context.SourceName+&quot;)&quot;+&quot;()&quot;+&quot;(&quot;+context.CurrentDate+&quot;)&quot;&#13;&#10;+context.FileName_Parameter+context.fileextension;&#13;&#10;context.DQFilename=context.FileName_Parameter+context.fileextension;&#13;&#10;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__&lt;br&gt;&lt;b&gt;Assign Context Parameters&lt;/b&gt;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_3"/>
+  </node>
+  <node componentName="MS_BAYER_TALEND_CORE:Bootstrapper" offsetLabelX="0" offsetLabelY="0" posX="128" posY="-384">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="Bootstrapper_1"/>
+    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
+  </node>
+  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="352">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPostgresqlInput_1"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_1"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="PRIOR_TO_V9"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="PostgreSQL"/>
+    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;5432&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:Pzyaln+fPXhKpyEg4AKT6Jxln/o/grh/EVzxV0sBV2c//fi/CpCuyA=="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot; &#13;&#10;select&#13;&#10;columnname,&#13;&#10;columnposition,&#13;&#10;columnlength,&#13;&#10;isdqcheckapplicable,&#13;&#10;null_check,&#13;&#10;domain_check,&#13;&#10;columntype,&#13;&#10;columnformat,&#13;&#10;channel,&#13;&#10;vendor_source,&#13;&#10;asset_name,&#13;&#10;product&#13;&#10;from \&quot;&quot;+context.configurationDatabaseSchema+&quot;\&quot;.&quot;+context.DQAuditTable+&quot;&#13;&#10;where  country_code=upper('&quot;+context.clientId+&quot;')  &#13;&#10;and file_name='&quot;+context.DQFilename+&quot;'&#13;&#10;order by columnposition asc   &quot;"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="postgres_id"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="USE_CURSOR" value="false"/>
+    <elementParameter field="TEXT" name="CURSOR_SIZE" show="false" value="1000"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="column_name"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="column_position"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="column_length"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Check_to_be_done"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="null_check"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="domain_check"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="column_type"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="column_format"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="channel"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="vendor_source"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="asset_name"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="product"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value=" __UNIQUE_NAME__&lt;br&gt;&lt;b&gt;Fetch File Schema&lt;/b&gt;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tPostgresqlInput_1">
+      <column comment="" key="false" length="21" name="column_name" nullable="true" originalLength="21" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="column_position" nullable="true" originalLength="10" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="column_length" nullable="true" originalLength="1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="Check_to_be_done" nullable="true" originalLength="30" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="20" name="null_check" nullable="true" originalLength="20" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="domain_check" nullable="true" originalLength="10" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="column_type" nullable="true" originalLength="30" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="column_format" nullable="true" originalLength="30" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="channel" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="vendor_source" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="asset_name" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="product" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFlowToIterate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="288" posY="352">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFlowToIterate_1"/>
+    <elementParameter field="CHECK" name="DEFAULT_MAP" value="false"/>
+    <elementParameter field="TABLE" name="MAP">
+      <elementValue elementRef="KEY" value="&quot;column_name&quot;"/>
+      <elementValue elementRef="VALUE" value="column_name"/>
+      <elementValue elementRef="KEY" value="&quot;column_position&quot;"/>
+      <elementValue elementRef="VALUE" value="column_position"/>
+      <elementValue elementRef="KEY" value="&quot;column_length&quot;"/>
+      <elementValue elementRef="VALUE" value="column_length"/>
+      <elementValue elementRef="KEY" value="&quot;Check_to_be_done&quot;"/>
+      <elementValue elementRef="VALUE" value="Check_to_be_done"/>
+      <elementValue elementRef="KEY" value="&quot;null_check&quot;"/>
+      <elementValue elementRef="VALUE" value="null_check"/>
+      <elementValue elementRef="KEY" value="&quot;domain_check&quot;"/>
+      <elementValue elementRef="VALUE" value="domain_check"/>
+      <elementValue elementRef="KEY" value="&quot;column_format&quot;"/>
+      <elementValue elementRef="VALUE" value="column_format"/>
+      <elementValue elementRef="KEY" value="&quot;column_type&quot;"/>
+      <elementValue elementRef="VALUE" value="column_type"/>
+      <elementValue elementRef="KEY" value="&quot;positional_index_and_length&quot;"/>
+      <elementValue elementRef="VALUE" value="column_name"/>
+      <elementValue elementRef="KEY" value="&quot;column_name_alias&quot;"/>
+      <elementValue elementRef="VALUE" value="column_name"/>
+      <elementValue elementRef="KEY" value="&quot;product&quot;"/>
+      <elementValue elementRef="VALUE" value="product"/>
+      <elementValue elementRef="KEY" value="&quot;decimal_separator&quot;"/>
+      <elementValue elementRef="VALUE" value="column_name"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="Flow To Iterate"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFlowToIterate_1"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="448" posY="352">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_4"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="context.product=row2.product==null?&quot;&quot;:row2.product;&#13;&#10;context.channel=row2.channel==null?&quot;&quot;:row2.channel;&#13;&#10;context.vendor_source=row2.vendor_source==null?&quot;&quot;:row2.vendor_source;&#13;&#10;context.asset_name=row2.asset_name==null?&quot;&quot;:row2.asset_name;&#13;&#10;globalMap.put(&quot;column_name&quot;+(String)globalMap.get(&quot;column_position&quot;), (String)globalMap.get(&quot;column_name&quot;));&#13;&#10;&#13;&#10;globalMap.put(&quot;column_length&quot;+(String)globalMap.get(&quot;column_position&quot;), (String)globalMap.get(&quot;column_length&quot;));&#13;&#10;&#13;&#10;globalMap.put(&quot;column_type&quot;+(String)globalMap.get(&quot;column_position&quot;), (String)globalMap.get(&quot;column_type&quot;));&#13;&#10;&#13;&#10;if( globalMap.get(&quot;column_type&quot;).toString().equalsIgnoreCase(&quot;date&quot;))&#13;&#10;{&#13;&#10; &#9;globalMap.put(&quot;column_format&quot;+(String)globalMap.get(&quot;column_position&quot;), (String)globalMap.get(&quot;column_format&quot;));&#13;&#10;&#9;SimpleDateFormat s = new SimpleDateFormat((String)globalMap.get(&quot;column_format&quot;)); &#13;&#10;&#9;s.setLenient(false);&#13;&#10;&#9;globalMap.put(&quot;date_column_format_obj&quot;+(String)globalMap.get(&quot;column_position&quot;), s);&#13;&#10;&#13;&#10;}&#13;&#10;&#9; &#13;&#10;globalMap.put(&quot;check_to_be_done&quot;+(String)globalMap.get(&quot;column_position&quot;), (String)globalMap.get(&quot;check_to_be_done&quot;));&#13;&#10;&#13;&#10;globalMap.put(&quot;null_check&quot;+(String)globalMap.get(&quot;column_position&quot;), (String)globalMap.get(&quot;null_check&quot;));&#13;&#10;&#13;&#10;globalMap.put(&quot;domain_check&quot;+(String)globalMap.get(&quot;column_position&quot;), (String)globalMap.get(&quot;domain_check&quot;));&#13;&#10;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__&lt;br&gt;&lt;b&gt;Set Schema Key-Value Pair&lt;/b&gt;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_4"/>
+  </node>
+  <node componentName="tLibraryLoad" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="832" posY="640">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLibraryLoad_1"/>
+    <elementParameter field="MODULE_LIST" name="LIBRARY" value="&quot;commons-lang3-3.3.2.jar&quot;"/>
+    <elementParameter field="TABLE" name="HOTLIBS"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__&lt;br&gt;&lt;b&gt;Custom Jar&lt;/b&gt;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tLibraryLoad" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="992" posY="640">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLibraryLoad_2"/>
+    <elementParameter field="MODULE_LIST" name="LIBRARY" value="&quot;commons-text-1.2.jar&quot;"/>
+    <elementParameter field="TABLE" name="HOTLIBS"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__&lt;br&gt;&lt;b&gt;Custom Jars&lt;/b&gt;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="jl_processcycle" offsetLabelX="0" offsetLabelY="0" posX="128" posY="-256">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="Delta_load_timestamp_1"/>
+    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
+  </node>
+  <node componentName="tS3Get_DownloadFile" offsetLabelX="0" offsetLabelY="0" posX="128" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tS3Get_DownloadFile_1"/>
+    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
+  </node>
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="544" posY="1056">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_1"/>
+    <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
+    <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
+    <elementParameter field="TABLE" name="VALUES">
+      <elementValue elementRef="SCHEMA_COLUMN" value="ProcessedSourceRowCount"/>
+      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tFileInputDelimited_4_NB_LINE&quot;))"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="FileName"/>
+      <elementValue elementRef="VALUE" value="context.FileName_Parameter"/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="USE_INTABLE" value="false"/>
+    <elementParameter field="TABLE" name="INTABLE" show="false"/>
+    <elementParameter field="RADIO" name="USE_INLINECONTENT" value="false"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;;&quot;"/>
+    <elementParameter field="MEMO" name="INLINECONTENT" show="false" value=""/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFixedFlowInput_1">
+      <column comment="" key="false" length="-1" name="ProcessedSourceRowCount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="FileName" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tLog" offsetLabelX="0" offsetLabelY="0" posX="736" posY="1056">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLog_1"/>
+    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
+    <metadata connector="FLOW" name="tLog_1">
+      <column comment="" key="false" length="-1" name="ProcessedSourceRowCount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="FileName" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="1056">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_2"/>
+    <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
+    <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
+    <elementParameter field="TABLE" name="VALUES">
+      <elementValue elementRef="SCHEMA_COLUMN" value="RejectedRowsCountAtSource"/>
+      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tFileInputDelimited_4_NB_LINE&quot;))"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ErrorMessage"/>
+      <elementValue elementRef="VALUE" value="((String)globalMap.get(&quot;tFileInputDelimited_4_ERROR_MESSAGE&quot;))"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="FileName"/>
+      <elementValue elementRef="VALUE" value="context.FileName_Parameter"/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="USE_INTABLE" value="false"/>
+    <elementParameter field="TABLE" name="INTABLE" show="false"/>
+    <elementParameter field="RADIO" name="USE_INLINECONTENT" value="false"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;;&quot;"/>
+    <elementParameter field="MEMO" name="INLINECONTENT" show="false" value=""/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFixedFlowInput_2">
+      <column comment="" key="false" length="-1" name="RejectedRowsCountAtSource" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ErrorMessage" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="FileName" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tLog" offsetLabelX="0" offsetLabelY="0" posX="320" posY="1056">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLog_2"/>
+    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
+    <metadata connector="FLOW" name="tLog_2">
+      <column comment="" key="false" length="-1" name="RejectedRowsCountAtSource" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ErrorMessage" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="FileName" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1280" posY="768">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_3"/>
+    <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
+    <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
+    <elementParameter field="TABLE" name="VALUES">
+      <elementValue elementRef="SCHEMA_COLUMN" value="ProcessedRowCountinTargetFile"/>
+      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tFileOutputDelimited_5_NB_LINE&quot;))"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="FileName"/>
+      <elementValue elementRef="VALUE" value="context.FileName_Parameter"/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="USE_INTABLE" value="false"/>
+    <elementParameter field="TABLE" name="INTABLE" show="false"/>
+    <elementParameter field="RADIO" name="USE_INLINECONTENT" value="false"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;;&quot;"/>
+    <elementParameter field="MEMO" name="INLINECONTENT" show="false" value=""/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFixedFlowInput_3">
+      <column comment="" key="false" length="-1" name="ProcessedRowCountinTargetFile" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="FileName" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tLog" offsetLabelX="0" offsetLabelY="0" posX="1472" posY="768">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLog_3"/>
+    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
+    <metadata connector="FLOW" name="tLog_3">
+      <column comment="" key="false" length="-1" name="ProcessedRowCountinTargetFile" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="FileName" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1280" posY="928">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_4"/>
+    <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
+    <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
+    <elementParameter field="TABLE" name="VALUES">
+      <elementValue elementRef="SCHEMA_COLUMN" value="RejectedRowsCountAtTarget"/>
+      <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tFileOutputDelimited_6_NB_LINE&quot;))"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="FileName"/>
+      <elementValue elementRef="VALUE" value="context.FileName_Parameter"/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="USE_INTABLE" value="false"/>
+    <elementParameter field="TABLE" name="INTABLE" show="false"/>
+    <elementParameter field="RADIO" name="USE_INLINECONTENT" value="false"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;;&quot;"/>
+    <elementParameter field="MEMO" name="INLINECONTENT" show="false" value=""/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFixedFlowInput_4">
+      <column comment="" key="false" length="-1" name="RejectedRowsCountAtTarget" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="FileName" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tLog" offsetLabelX="0" offsetLabelY="0" posX="1472" posY="928">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLog_4"/>
+    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
+    <metadata connector="FLOW" name="tLog_4">
+      <column comment="" key="false" length="-1" name="RejectedRowsCountAtTarget" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="FileName" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tPostgresqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPostgresqlConnection_1"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9"/>
+    <elementParameter field="TEXT" name="HOST" value="context.configurationDatabaseHost"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="PostgreSQL"/>
+    <elementParameter field="TEXT" name="PORT" value="context.configurationDatabasePort"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.configurationDatabaseDatabase"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="context.configurationDatabaseSchema"/>
+    <elementParameter field="TEXT" name="USER" value="context.configurationDatabaseUser"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:uvyZ1wcepVMpYyV5BluDrazvCY0qAizSKi1E6+nEBb3uVOBN/YIlQAjHOoRGvT1kzaad5Ea6ZUcXFbxFYXuiYXhoyaIJT9Yf8S4GEcfD8IV2n94k"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="SHARED_CONNECTION_NAME" show="false" value=""/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="AUTO_COMMIT" value="true"/>
+    <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__&lt;br&gt;&lt;b&gt;Connect to Postgresql DB&lt;/b&gt;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="MS_BAYER_TALEND_CORE:Finisher" offsetLabelX="0" offsetLabelY="0" posX="128" posY="1312">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="Finisher_1"/>
+    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
+  </node>
+  <node componentName="tPostgresqlClose" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="1184">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPostgresqlClose_1"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_1"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tJava_2" offsetLabelX="0" offsetLabelY="0" source="tJava_2" target="tFileInputDelimited_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
+  </connection>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tJavaRow_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tFileInputDelimited_4">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk2"/>
+  </connection>
+  <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tJavaRow_1" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_1" target="tMap_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row4"/>
+  </connection>
+  <connection connectorName="FLOW" label="headerdata" lineStyle="0" metaname="headerdata" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tFileOutputDelimited_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="headerdata"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tFileOutputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileOutputDelimited_1" target="tLibraryLoad_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk1"/>
+  </connection>
+  <connection connectorName="FLOW" label="row9" lineStyle="0" metaname="tFileInputDelimited_4" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_4" target="tJavaRow_4">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="message"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="error"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="error_flag"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="data"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="all_columns"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row9"/>
+  </connection>
+  <connection connectorName="COMPONENT_ERROR" label="OnComponentError" lineStyle="5" metaname="tFileInputDelimited_4" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_4" target="tFixedFlowInput_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentError1"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tFileInputDelimited_4" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_4" target="tFixedFlowInput_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk2"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileInputDelimited_4" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_4" target="tPostgresqlClose_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk3"/>
+  </connection>
+  <connection connectorName="FLOW" label="row10" lineStyle="0" metaname="tJavaRow_4" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_4" target="tMap_3">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="reject"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row10"/>
+  </connection>
+  <connection connectorName="FLOW" label="copyOfrecords" lineStyle="0" metaname="copyOfrecords" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_3" target="tFileOutputDelimited_5">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="copyOfrecords"/>
+  </connection>
+  <connection connectorName="FLOW" label="copyOfrejected_records" lineStyle="0" metaname="copyOfrejected_records" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_3" target="tFileOutputDelimited_6">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="copyOfrejected_records"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tFileOutputDelimited_5" offsetLabelX="0" offsetLabelY="0" source="tFileOutputDelimited_5" target="tFixedFlowInput_3">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk3"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tFileOutputDelimited_6" offsetLabelX="0" offsetLabelY="0" source="tFileOutputDelimited_6" target="tFixedFlowInput_4">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk4"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tJava_3" offsetLabelX="0" offsetLabelY="0" source="tJava_3" target="tS3Get_DownloadFile_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk4"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk (TRIGGER_OUTPUT_2)" lineStyle="1" metaname="Bootstrapper_1" offsetLabelX="0" offsetLabelY="0" source="Bootstrapper_1" target="Delta_load_timestamp_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk5"/>
+  </connection>
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tPostgresqlInput_1" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_1" target="tFlowToIterate_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="column_name"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="column_position"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="column_length"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Check_to_be_done"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="null_check"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="domain_check"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="column_type"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="column_format"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="decimal_separator"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="vendor_source"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="decimal_seperator"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="dq_check_applicable"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="asset_name"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="file_type"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="channel"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="positional_index_and_length"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="file_delimiter"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="header_position"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="product"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="column_name_alias"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tPostgresqlInput_1" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_1" target="tJava_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk6"/>
+  </connection>
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFlowToIterate_1" offsetLabelX="0" offsetLabelY="0" source="tFlowToIterate_1" target="tJava_4">
+    <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
+    <elementParameter field="TEXT" name="NUMBER_PARALLEL" show="false" value="2"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="iterate1"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tLibraryLoad_1" offsetLabelX="0" offsetLabelY="0" source="tLibraryLoad_1" target="tLibraryLoad_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk7"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk (TRIGGER_OUTPUT_1)" lineStyle="1" metaname="Delta_load_timestamp_1" offsetLabelX="0" offsetLabelY="0" source="Delta_load_timestamp_1" target="tJava_3">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk8"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk (TRIGGER_OUTPUT_1)" lineStyle="1" metaname="tS3Get_DownloadFile_1" offsetLabelX="0" offsetLabelY="0" source="tS3Get_DownloadFile_1" target="tPostgresqlConnection_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk9"/>
+  </connection>
+  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tFixedFlowInput_1" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_1" target="tLog_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="ProcessedRowCountinFile"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ErrorMessage"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="FileName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
+  </connection>
+  <connection connectorName="FLOW" label="row6" lineStyle="0" metaname="tFixedFlowInput_2" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_2" target="tLog_2">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="ProcessedRowCountinFile"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ErrorMessage"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="FileName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row6"/>
+  </connection>
+  <connection connectorName="FLOW" label="row7" lineStyle="0" metaname="tFixedFlowInput_3" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_3" target="tLog_3">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="RejectedRowCountinFile"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ErrorMessage"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="FileName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row7"/>
+  </connection>
+  <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="tFixedFlowInput_4" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_4" target="tLog_4">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="RejectedRowsCountAtTarget"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ErrorMessage"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="FileName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row5"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tPostgresqlConnection_1" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlConnection_1" target="tPostgresqlInput_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk10"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tPostgresqlClose_1" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlClose_1" target="Finisher_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk11"/>
+  </connection>
+  <note opaque="true" posX="576" posY="-384" sizeHeight="64" sizeWidth="289" text="Project Name:- BI_BBS_IMCM_DI_ARCH">
+    <elementParameter field="COLOR" name="NOTE_COLOR" value="0;0;255"/>
+    <elementParameter field="COLOR" name="NOTETXT_COLOR" value="255;255;255"/>
+    <elementParameter field="COLOR" name="NOTE_LINECOLOR" value="155;199;204"/>
+  </note>
+  <note opaque="true" posX="576" posY="-288" sizeHeight="97" sizeWidth="353" text="Apply DQ Checks and &#13;&#10;Load data to L1-quality-checked folder &#13;&#10;from L0-raw folder ">
+    <elementParameter field="COLOR" name="NOTE_COLOR" value="128;255;0"/>
+  </note>
+  <note opaque="true" posX="576" posY="-160" sizeHeight="97" sizeWidth="321" text="Context Parameters/Tables used :-&#13;&#10;&quot;ARCH_DEV&quot;.taskcontextvariables&#13;&#10;&quot;ARCH_DEV&quot;.processcycle&#13;&#10;">
+    <elementParameter field="COLOR" name="NOTE_COLOR" value="192;192;192"/>
+  </note>
+  <note opaque="true" posX="576" posY="-32" sizeHeight="64" sizeWidth="321" text="Rerun by running the job jo_DQChecks">
+    <elementParameter field="COLOR" name="NOTE_COLOR" value="255;0;0"/>
+  </note>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="128;255;128"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputDelimited_1"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="Generate file header "/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="255;255;255"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="128;255;128"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputDelimited_4"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="Apply DQ Checks on File data"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="255;255;255"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="128;255;128"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_3"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="128;255;128"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Bootstrapper_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPostgresqlInput_1"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="Fetch metadata from DQAudit"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="255;255;255"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="128;255;128"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLibraryLoad_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="128;255;128"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLibraryLoad_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="128;255;128"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Delta_load_timestamp_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="128;255;128"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tS3Get_DownloadFile_1"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="Download file from S3"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="255;255;255"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="128;255;128"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_1"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="Log processed records count"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="255;255;255"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;255;128"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_2"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="Log rejected records and error message"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="255;255;255"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;255;128"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_3"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="Log processed records count in file"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="255;255;255"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;255;128"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_4"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="Log rejected records count in log"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="255;255;255"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;255;128"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPostgresqlConnection_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="128;255;128"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Finisher_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPostgresqlClose_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_a44eacee-ec78-473f-a475-50460c2719fa"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>nymMZSr6fE3AWGe2JUB4gldBAk3M7ssOIeFsH2Ns19iRx53Ek5b1KLF9sQ7DNPheHBOBCGl+CQUa
+FQ8Ulf9NNw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d9baef05-bfdc-4332-bfb9-2d9bbadd2113"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>LFIa4czlmYffLnbr0GzMJRqA7gB3/5M1befa0h+jVx0CxC3FD1kQGvyQ/SKVDgi+iVXyeoA1FUP3
+Z2isskK3oA==</DigestValue></Reference></SignedInfo><SignatureValue>Gu3yvY1lnPKqFApdO9jbxP1N/VvQUfYCVu4pkIUI5iCKb2YeI5KWAyfQzZxYp8m+59XCJ0Z/QSCi
+nWIH6XakD+zicHB178y+mSnGCua2CNXxH9WyOJH/Mu4TUv9loRz32nrY3zQQtFLSC/o40UhHlw0n
+kYmcCBNpcxBsCNe08y0U6fc3AaiSdDXa2D0S8h8DoA5F0Ccfv3vVi3YEp5fHVq7Qt9tiP9UlmHig
+rmjXTITRuqcJ/h09yrXApDIVUK0L96e8NUxU4p+hSg77QbnVGlulFQX/DviyrGMIQppT2/D/OtTL
+jcE4Hbbh/6LSNFV8PhLnrN1Q1tYMTyUCDUzARw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -138,4 +1374,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_b76819a7-00d2-437a-b645-b938e2a522d5" Target="#_a9f2683e-818a-430a-b8b1-bd5e85e99a07"><Timestamp>2020-08-26 07:03:09</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d9baef05-bfdc-4332-bfb9-2d9bbadd2113" Target="#_a44eacee-ec78-473f-a475-50460c2719fa"><Timestamp>2020-08-26 07:03:44</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
