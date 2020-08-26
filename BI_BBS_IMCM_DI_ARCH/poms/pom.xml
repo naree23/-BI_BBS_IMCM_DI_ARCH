@@ -15,6 +15,7 @@
     <module>jobs/process/dim_employee_l3_0.1</module>
     <module>jobs/process/dim_employee_l4_0.1</module>
     <module>jobs/process/fact_clm_presentation_l2_0.1</module>
+    <module>jobs/process/fact_clm_presentation_l3_0.1</module>
   </modules>
   <properties>
     <signer.version>7.3.1</signer.version>
